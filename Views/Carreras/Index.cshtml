@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Progra_4_Progreso_1.Models.Carrera>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre_carrera)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.campus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero_semestre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_carrera)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.campus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_semestre)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Idcarrera">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Idcarrera">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Idcarrera">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
