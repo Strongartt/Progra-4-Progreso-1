@@ -9,7 +9,7 @@ namespace Progra_4_Progreso_1.Models
         public int Id { get; set; }
         [Required]
         public string Nombre { get; set; }
-        public decimal  Calificacion { get; set; }
+        public float  Calificacion { get; set; }
         public Boolean Estado { get; set; }
         public DateTime EstadoFecha { get; set; }
         [ForeignKey("Ricardo")]
